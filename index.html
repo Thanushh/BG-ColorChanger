@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML & CSS Foundations Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="background">
+    <div id="heading" >
+      BG Color Changer
+      <span id="color">hsl(47°, 89%, 60%)</span>
+    </div>
+    <div class="card" style="border: 1px solid;">
+      <img src="./assets/images/illustration-article.svg" alt="Card banner" class="card-image" />
+      <div class="card-content">
+        <span class="badge">Learning</span>
+        <p class="date">Published 21 Dec 2023</p>
+        <h2>HTML & CSS foundations</h2>
+        <p class="description">
+          These languages are the backbone of every website, defining structure, content, and presentation.
+        </p>
+        <div class="author">
+          <img src="./assets/images/image-avatar.webp" alt="Author" class="avatar">
+          <span>Greg Hooper</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="button" onclick="changeBackgroundColor()">Change Color</button>
+  </div>
+
+  <script>
+    let colorText = document.getElementById("color");
+    function changeBackgroundColor() {
+      const randomColor = `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`;
+      document.body.style.backgroundColor = randomColor;
+      colorText.textContent = randomColor;
+    }
+  </script>
+</body>
+</html>
+
+
