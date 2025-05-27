@@ -114,6 +114,7 @@ body {
   font-family: myFont;
   font-size: 18px;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .button:hover {
